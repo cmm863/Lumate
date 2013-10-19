@@ -1,0 +1,10 @@
+<html>
+<body>
+<h1>Guests </h1>
+(% for guest in guests %)
+<div>
+<h2><a href="/guests/get/{{ guest.id }}/">{{ guest.first_name }}</a></h2>
+</div>
+(% endfor %)
+</body>
+</html>
