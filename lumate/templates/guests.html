@@ -1,10 +1,18 @@
 <html>
 <body>
 <h1>Guests </h1>
+<table border="1">
+  <tr>
+    <th>ID Link</th>
+    <th>First Name</th>
+    <th>Last Name</th>
 {% for guest in guests %}
-<div>
-<h2><a href="/guestbook/get/{{ guest.id }}/">{{ guest.first_name }}</a></h2>
-</div>
+  <tr>
+    <th><a href="/guestbook/get/{{ guest.id }}/">{{ guest.id }}</a></th>
+    <th>{{ guest.first_name }}</th>
+    <th>{{ guest.last_name }}</th>
+  </tr>
 {% endfor %}
+</table>
 </body>
 </html>
