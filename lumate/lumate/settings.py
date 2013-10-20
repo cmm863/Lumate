@@ -11,13 +11,16 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'django_db',                      # Or path to database file if using sqlite3.
+        # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'django_db',  # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'django_login',
         'PASSWORD': 'password',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
+        # Empty for localhost through domain sockets or 
+        #  '127.0.0.1' for localhost through TCP.
+        'HOST': '',
+        'PORT': '',  # Set to empty string for default.
     }
 }
 
@@ -79,7 +82,7 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 # Make this unique, and don't share it with anybody.
@@ -89,7 +92,7 @@ SECRET_KEY = 'r8m1*ft^+4_5(3e0-z=2bm_z7wo%!2pfl$lis9n^0tgb!r#w-v'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+    # 'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -108,7 +111,8 @@ ROOT_URLCONF = 'lumate.urls'
 WSGI_APPLICATION = 'lumate.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Put strings here, like "/home/html/django_templates"
+    #  or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     '/home/ubuntu/Lumate/lumate/templates',
@@ -159,3 +163,4 @@ LOGGING = {
         },
     }
 }
+

@@ -7,13 +7,16 @@ from django.http import HttpResponseRedirect
 from django.core.context_processors import csrf
 import datetime
 
+
 def guests(request):
     return render_to_response('guests.html',
-                             {'guests': Guest.objects.all() })
+                              {'guests': Guest.objects.all()})
+
 
 def guest(request, guest_id=1):
     return render_to_response('guest.html',
-                             {'guest': Guest.objects.get(id=guest_id) })
+                              {'guest': Guest.objects.get(id=guest_id)})
+
 
 def create(request):
     if request.POST:
@@ -29,16 +32,14 @@ def create(request):
         form.ip_address = i_add
         form.browser_info = brows_info
         form.date_signed = today
-        
         form.save()
 
         return HttpResponseRedirect('/guestbook/all')
-    else: 
+    else:
         form = GuestForm()
-    
     args = {}
     args.update(csrf(request))
-    
     args['form'] = form
 
     return render_to_response('create_guest.html', args)
+
