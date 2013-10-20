@@ -6,7 +6,7 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'lumate.views.home', name='home'),
+    url(r'^$', 'lumate.views.index'),
     # url(r'^lumate/', include('lumate.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
